@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "588171185655",
+    "firebase_url": "https://billboard-the-hot100-app.firebaseio.com",
+    "project_id": "billboard-the-hot100-app",
+    "storage_bucket": "billboard-the-hot100-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588171185655:android:1c03eec11bebcc9fd8f2f2",
+        "android_client_info": {
+          "package_name": "tk.paulmburu.billboardthehot_100app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588171185655-buv9cqvgsmvqkrmpvpa2go1a0f9oej06.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tk.paulmburu.billboardthehot_100app",
+            "certificate_hash": "1d7ce4b60b697d9f2e6c5e467065bf481d2767c4"
+          }
+        },
+        {
+          "client_id": "588171185655-c961pat1r2ne6s293ukmq6qruod9ngsr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJAUDWHGPC48mEgEDcmbh_n0kM8PmgG50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588171185655-c961pat1r2ne6s293ukmq6qruod9ngsr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
