@@ -15,7 +15,7 @@ import tk.paulmburu.billboardthehot_100app.DataLoadListener
 
 class FirebaseRepository {
 
-    var songs: List<MusicSong> = listOf()
+    var songs = ArrayList<MusicSong>()
 
 
 
@@ -51,6 +51,8 @@ class FirebaseRepository {
         var song: MutableLiveData<List<MusicSong>> = MutableLiveData()
         song.value = songs
 
+        Log.d(TAG, "getSongs {${song.value.toString()}}")
+
         return song
     }
 
@@ -71,7 +73,13 @@ class FirebaseRepository {
 //                    val value = child.getValue(MusicSong::class.java)
                     val value = child.value.hashCode()
 
-                    Log.d(TAG, "Value is: " + value )
+                    var artist_child: String = child.child("Artists").getValue().toString()
+                    var name_child: String = child.child("Name").getValue().toString()
+
+//                    var musicSong: MusicSong = MusicSong(at,nm)
+                    songs.add(MusicSong(artist_child,name_child))
+
+                    Log.d(TAG, "Value is: {$name_child} == {$artist_child}")
                 }
 
 //                dataLoadListener!!.onNameLoaded()

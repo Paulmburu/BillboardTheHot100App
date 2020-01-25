@@ -9,7 +9,8 @@ import androidx.lifecycle.ViewModel
 import tk.paulmburu.billboardthehot_100app.Repository.FirebaseRepository
 
 class MusicViewModel(application: Application): AndroidViewModel(application){
-    lateinit var songs: MutableLiveData<List<MusicSong>>
+    var songs: MutableLiveData<List<MusicSong>>
+
 
     init {
 //        songs?.let {
@@ -21,4 +22,6 @@ class MusicViewModel(application: Application): AndroidViewModel(application){
     fun get_Songs(): LiveData<List<MusicSong>>{
         return songs
     }
+
+
 }

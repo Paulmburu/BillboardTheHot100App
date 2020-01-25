@@ -21,6 +21,7 @@ class MyAdapter(var data: LiveData<List<MusicSong>>) : RecyclerView.Adapter<MyAd
 //        this.data = data
 //    }
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val view = layoutInflater

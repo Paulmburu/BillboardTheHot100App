@@ -1,7 +1,10 @@
 package tk.paulmburu.billboardthehot_100app
 
+import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -45,6 +48,9 @@ class MainActivity : AppCompatActivity() {
         viewManager = LinearLayoutManager(this)
 //        viewAdapter = MyAdapter(myDataset)
         viewAdapter = MyAdapter(viewModel.get_Songs())
+
+
+
 
         recyclerView = findViewById<RecyclerView>(R.id.my_recycler_view).apply {
             // use this setting to improve performance if you know that changes
