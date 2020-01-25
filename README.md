@@ -12,3 +12,4 @@ Top a hundred billboards songs
 * [x] [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
 * [x] [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)
 * [x] [Recyclerview + CardView](https://developer.android.com/jetpack/androidx/releases/recyclerview)
+* [x] [Firebase Realtime Database](https://firebase.google.com/docs/database/android/start)
