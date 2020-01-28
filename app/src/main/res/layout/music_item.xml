@@ -14,48 +14,6 @@
     card_view:cardBackgroundColor="@android:color/white"
     card_view:cardCornerRadius="20dp">
 
-
-    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_gravity="center">-->
-
-    <!--        <ImageView-->
-    <!--            android:id="@+id/song_image_id"-->
-    <!--            android:layout_width="120dp"-->
-    <!--            android:layout_height="120dp"-->
-    <!--            android:layout_marginLeft="5dp"-->
-    <!--            android:padding="10dp"-->
-    <!--            android:src="@drawable/bb"-->
-    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--            app:layout_constraintStart_toStartOf="parent"-->
-    <!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--        <TextView-->
-    <!--            android:id="@+id/song_name_id"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_marginStart="60dp"-->
-    <!--            android:layout_marginTop="16dp"-->
-    <!--            android:text=" Memories"-->
-    <!--            android:textSize="30sp"-->
-    <!--            android:textStyle="bold"-->
-    <!--            app:layout_constraintStart_toEndOf="@+id/song_image_id"-->
-    <!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--        <TextView-->
-    <!--            android:id="@+id/song_artist_id"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_marginStart="80dp"-->
-    <!--            android:layout_marginTop="12dp"-->
-    <!--            android:text="Maroon 5 "-->
-    <!--            android:textSize="24sp"-->
-    <!--            app:layout_constraintStart_toEndOf="@+id/song_image_id"-->
-    <!--            app:layout_constraintTop_toBottomOf="@+id/song_name_id" />-->
-
-    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,6 +21,7 @@
         android:padding="5dp">
 
         <ImageView
+            android:scaleType="centerInside"
             android:id="@+id/song_image_id"
             android:layout_width="80dp"
             android:layout_height="80dp"
