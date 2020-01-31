@@ -1,11 +1,10 @@
-package tk.paulmburu.billboardthehot_100app
+package tk.paulmburu.billboardthehot_100app.viewModels
 
 import android.app.Application
-import android.content.Context
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import tk.paulmburu.billboardthehot_100app.model.MusicSong
 import tk.paulmburu.billboardthehot_100app.Repository.FirebaseRepository
 
 class MusicViewModel(application: Application): AndroidViewModel(application){

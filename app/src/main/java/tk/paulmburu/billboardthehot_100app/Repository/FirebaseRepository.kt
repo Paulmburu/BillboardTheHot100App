@@ -4,13 +4,11 @@ import android.content.ContentValues.TAG
 import android.content.Context
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import tk.paulmburu.billboardthehot_100app.MusicSong
-import com.google.firebase.database.DatabaseReference
+import tk.paulmburu.billboardthehot_100app.model.MusicSong
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DataSnapshot
-import tk.paulmburu.billboardthehot_100app.DataLoadListener
 
 
 class FirebaseRepository {
@@ -62,22 +60,26 @@ class FirebaseRepository {
         val myRef = database.getReference("Data")
 
 
+        songs.clear()
+
         // Read from the database
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 for (child in dataSnapshot.getChildren()) {
-//                    val value = dataSnapshot.getValue(MusicSong::class.java)
-
-//                    val value = child.getValue(MusicSong::class.java)
-                    val value = child.value.hashCode()
 
                     var artist_child: String = child.child("Artists").getValue().toString()
                     var name_child: String = child.child("Name").getValue().toString()
 
-//                    var musicSong: MusicSong = MusicSong(at,nm)
-                    songs.add(MusicSong(artist_child,name_child))
+
+
+                    songs.add(
+                        MusicSong(
+                            artist_child,
+                            name_child
+                        )
+                    )
 
                     Log.d(TAG, "Value is: {$name_child} == {$artist_child}")
                 }

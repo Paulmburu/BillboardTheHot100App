@@ -1,14 +1,14 @@
-package tk.paulmburu.billboardthehot_100app
+package tk.paulmburu.billboardthehot_100app.ui
 
-import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import tk.paulmburu.billboardthehot_100app.model.MusicSong
+import tk.paulmburu.billboardthehot_100app.Adapters.MyAdapter
+import tk.paulmburu.billboardthehot_100app.R
+import tk.paulmburu.billboardthehot_100app.viewModels.MusicViewModel
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,7 +23,9 @@ class MainActivity : AppCompatActivity() {
 
         val application = requireNotNull(this).application
 
-        val viewModel = ViewModelProviders.of(this)[MusicViewModel(application)::class.java]
+        val viewModel = ViewModelProviders.of(this)[MusicViewModel(
+            application
+        )::class.java]
 
         var myDataset =
             listOf<MusicSong>(
@@ -42,7 +44,8 @@ class MainActivity : AppCompatActivity() {
                 MusicSong("hello", "Buba"),
                 MusicSong("Mandong", "Odi wa muranga"),
                 MusicSong("hello", "Buba"),
-                MusicSong("Mandong", "Odi wa muranga"))
+                MusicSong("Mandong", "Odi wa muranga")
+            )
 
 
         viewManager = LinearLayoutManager(this)
