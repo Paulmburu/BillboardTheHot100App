@@ -13,6 +13,7 @@ Top a hundred billboards songs
 * [x] [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)
 * [x] [Recyclerview + CardView](https://developer.android.com/jetpack/androidx/releases/recyclerview)
 * [x] [Firebase Realtime Database](https://firebase.google.com/docs/database/android/start)
+* [x] [Glide](https://github.com/bumptech/glide)
 * [ ] [Offline Persistence with Room](https://developer.android.com/training/data-storage/room/index.html)
 * [ ] [Databinding](https://developer.android.com/topic/libraries/data-binding)
 * [ ] [Coroutines](https://developer.android.com/kotlin/coroutines)
