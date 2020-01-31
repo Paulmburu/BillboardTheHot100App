@@ -1,16 +1,13 @@
-package tk.paulmburu.billboardthehot_100app
+package tk.paulmburu.billboardthehot_100app.Adapters
 
-import android.os.Parcel
-import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import tk.paulmburu.billboardthehot_100app.R
+import tk.paulmburu.billboardthehot_100app.model.MusicSong
 
 class MyAdapter(var data: LiveData<List<MusicSong>>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 

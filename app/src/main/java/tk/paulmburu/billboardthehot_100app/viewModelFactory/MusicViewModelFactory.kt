@@ -1,4 +1,4 @@
-package tk.paulmburu.billboardthehot_100app
+package tk.paulmburu.billboardthehot_100app.viewModelFactory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

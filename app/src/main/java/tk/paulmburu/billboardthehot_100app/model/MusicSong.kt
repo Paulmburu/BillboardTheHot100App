@@ -1,4 +1,4 @@
-package tk.paulmburu.billboardthehot_100app
+package tk.paulmburu.billboardthehot_100app.model
 
 import com.google.firebase.database.PropertyName
 
