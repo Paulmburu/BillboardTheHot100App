@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/my_recycler_view"
     tools:listitem="@layout/music_item"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
 
 
