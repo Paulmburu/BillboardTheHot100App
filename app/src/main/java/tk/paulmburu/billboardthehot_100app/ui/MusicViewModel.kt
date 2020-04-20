@@ -10,8 +10,8 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import tk.paulmburu.billboardthehot_100app.model.MusicSong
 import tk.paulmburu.billboardthehot_100app.Repository.FirebaseRepository
+import tk.paulmburu.billboardthehot_100app.data.models.Song
 
 class MusicViewModel(application: Application): AndroidViewModel(application){
 
@@ -22,11 +22,11 @@ class MusicViewModel(application: Application): AndroidViewModel(application){
     val database = FirebaseDatabase.getInstance()
 
 
-    var songs: MutableLiveData<List<MusicSong>> = MutableLiveData()
+    var songs: MutableLiveData<List<Song>> = MutableLiveData()
 
-    fun getSongsUpdate():LiveData<List<MusicSong>>{
+    fun getSongsUpdate():LiveData<List<Song>>{
         Log.d(TAG,"firebase")
-        var currentSongs: MutableList<MusicSong> = mutableListOf()
+        var currentSongs: MutableList<Song> = mutableListOf()
         firebaseRepository.getBillboardSongs().addValueEventListener(object : ValueEventListener {
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -44,7 +44,7 @@ class MusicViewModel(application: Application): AndroidViewModel(application){
                     Log.d(TAG, "Value is: ")
 
                     currentSongs.add(
-                        MusicSong(
+                        Song(
                             artist_child,
                             name_child
                         )

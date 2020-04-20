@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import tk.paulmburu.billboardthehot_100app.model.MusicSong
 import tk.paulmburu.billboardthehot_100app.Adapters.MyAdapter
 import tk.paulmburu.billboardthehot_100app.R
 
