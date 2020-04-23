@@ -5,8 +5,9 @@ import io.reactivex.rxjava3.core.Observable
 import kotlinx.coroutines.tasks.await
 import tk.paulmburu.billboardthehot_100app.data.models.RealtimeSong
 import tk.paulmburu.billboardthehot_100app.data.models.Song
+import javax.inject.Inject
 
-class SongsRepository {
+class SongsRepository @Inject constructor() {
     val db = FirebaseFirestore.getInstance()
 
     suspend fun getSongs(
