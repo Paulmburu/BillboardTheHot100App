@@ -1,4 +1,4 @@
-package tk.paulmburu.billboardthehot_100app.ui
+package tk.paulmburu.billboardthehot_100app.presentations
 
 
 import androidx.lifecycle.LiveData
