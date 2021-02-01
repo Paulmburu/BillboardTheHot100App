@@ -16,19 +16,15 @@ class FirebaseRepository {
     var songs = ArrayList<MusicSong>()
 
 
-
-
     companion object {
-
-//        var mContext: Context? = null
-//        var dataLoadListener: DataLoadListener? = null
+        @Volatile
+        var dataLoadListener: DataLoadListener? = null
 
         @Volatile
         var INSTANCE: FirebaseRepository? = null
 
         fun getInstance(context: Context): FirebaseRepository {
 
-//            mContext = context
             synchronized(this) {
                 var instance = INSTANCE
 
@@ -36,7 +32,8 @@ class FirebaseRepository {
                     instance = FirebaseRepository()
                     INSTANCE = instance
                 }
-//                dataLoadListener = mContext as DataLoadListener
+//                dataLoadListener =
+
                 return instance!!
             }
 
@@ -84,7 +81,7 @@ class FirebaseRepository {
                     Log.d(TAG, "Value is: {$name_child} == {$artist_child}")
                 }
 
-//                dataLoadListener!!.onNameLoaded()
+                dataLoadListener!!.onDataLoaded()
             }
 
             override fun onCancelled(error: DatabaseError) {

@@ -8,9 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import tk.paulmburu.billboardthehot_100app.model.MusicSong
 import tk.paulmburu.billboardthehot_100app.Adapters.MyAdapter
 import tk.paulmburu.billboardthehot_100app.R
+import tk.paulmburu.billboardthehot_100app.Repository.DataLoadListener
 import tk.paulmburu.billboardthehot_100app.viewModels.MusicViewModel
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), DataLoadListener {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var viewAdapter: RecyclerView.Adapter<*>
@@ -27,32 +28,8 @@ class MainActivity : AppCompatActivity() {
             application
         )::class.java]
 
-        var myDataset =
-            listOf<MusicSong>(
-                MusicSong("hello", "Buba"),
-                MusicSong("Mandom", "Odi wa muranga"),
-                MusicSong("hello", "Buba"),
-                MusicSong("Mandong", "Odi wa muranga"),
-                MusicSong("hello", "Buba"),
-                MusicSong("Mandong", "Odi wa muranga"),
-                MusicSong("hello", "Buba"),
-                MusicSong("Mandong", "Odi wa muranga"),
-                MusicSong("hello", "Buba"),
-                MusicSong("Mandong", "Odi wa muranga"),
-                MusicSong("hello", "Buba"),
-                MusicSong("Mandong", "Odi wa muranga"),
-                MusicSong("hello", "Buba"),
-                MusicSong("Mandong", "Odi wa muranga"),
-                MusicSong("hello", "Buba"),
-                MusicSong("Mandong", "Odi wa muranga")
-            )
-
-
         viewManager = LinearLayoutManager(this)
-//        viewAdapter = MyAdapter(myDataset)
         viewAdapter = MyAdapter(viewModel.get_Songs())
-
-
 
 
         recyclerView = findViewById<RecyclerView>(R.id.my_recycler_view).apply {
@@ -66,8 +43,10 @@ class MainActivity : AppCompatActivity() {
             // specify an viewAdapter (see also next example)
             adapter = viewAdapter
         }
-
-
-
     }
+
+    override fun onDataLoaded() {
+        viewAdapter.notifyDataSetChanged()
+    }
+
 }
